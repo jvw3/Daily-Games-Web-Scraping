@@ -8,6 +8,8 @@ lxml = "*"
 python-dotenv = "*"
 requests = "*"
 beautifulsoup4 = "*"
+pytz = "*"
+schedule = "*"
 
 [dev-packages]
 
