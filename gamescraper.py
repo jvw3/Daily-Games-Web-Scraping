@@ -41,7 +41,7 @@ games_table = soup.find("table")
 #     print(game_time)
 #     print(channel_name)
 
-sender_email = "tru.dev3@gmail.com"
+sender_email = os.getenv('SENDER_EMAIL')
 receiver_email = os.getenv("RECEIVER_EMAIL")
 sender_password = os.getenv("SENDER_PASS")
 # message = games_table
