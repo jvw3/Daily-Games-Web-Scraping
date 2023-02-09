@@ -16,7 +16,6 @@ soup = BeautifulSoup(source, "lxml")
 # print(soup.prettify())
 
 title = soup.find("div", class_="gametitle").text
-# print(title)
 
 games_table = soup.find("table")
 # print(games_table)
@@ -41,7 +40,7 @@ games_table = soup.find("table")
 #     print(game_time)
 #     print(channel_name)
 
-sender_email = os.getenv('SENDER_EMAIL')
+sender_email = os.getenv("SENDER_EMAIL")
 receiver_email = os.getenv("RECEIVER_EMAIL")
 sender_password = os.getenv("SENDER_PASS")
 # message = games_table
@@ -49,8 +48,6 @@ html = games_table
 
 subject = "Check out today's games!"
 body = f"{games_table}"
-
-print(sender_password)
 
 email_message = MIMEMultipart()
 email_message["From"] = sender_email
@@ -60,11 +57,7 @@ email_message.attach(MIMEText(html, "html"))
 
 context = ssl.create_default_context()
 
-# with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
-#     smtp.login(sender_email, sender_password)
-#     smtp.sendmail(sender_email, receiver_email, email_message.as_string())
-# server = smtplib.SMTP('smtp.gmail.com', 587)
-# server.starttls()
-# server.login(sender_email, password)
-# print("Login successful")
-# server.sendmail(sender_email, receiver_email, message)
+with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
+    smtp.login(sender_email, sender_password)
+    smtp.sendmail(sender_email, receiver_email, email_message.as_string())
+server = smtplib.SMTP("smtp.gmail.com", 587)
