@@ -72,7 +72,7 @@ def send_email():
         smtp.sendmail(sender_email, receiver_email, email_message.as_string())
 
 
-schedule.every().day.at("15:15").do(send_email)
+schedule.every().day.at("15:50").do(send_email)
 
 while True:
     schedule.run_pending()
