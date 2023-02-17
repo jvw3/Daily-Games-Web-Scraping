@@ -15,6 +15,10 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.9" # install the python version needed
+      
+      - name: install python packages
+        run: |
+          pipenv shell
 
       - name: execute py script # run gamescraper.py
         env:
