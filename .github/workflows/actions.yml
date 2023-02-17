@@ -2,7 +2,7 @@ name: run gamescraper.py
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # At 3:30PM Every day
+    - cron: "*/5 * * * *" # Every 5 minutes
 
 jobs:
   build:
