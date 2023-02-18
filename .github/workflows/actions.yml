@@ -23,7 +23,9 @@ jobs:
 
       - name: execute py script # run gamescraper.py
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         run: |
           python gamescraper.py
 
