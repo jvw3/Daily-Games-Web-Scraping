@@ -18,7 +18,8 @@ jobs:
       
       - name: install python packages
         run: |
-          python3 pipenv shell
+          pip install pipenv
+          pipenv shell
 
       - name: execute py script # run gamescraper.py
         env:
