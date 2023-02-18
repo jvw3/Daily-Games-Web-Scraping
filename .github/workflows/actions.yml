@@ -18,13 +18,14 @@ jobs:
       
       - name: install python packages
         run: |
-          pip install pipenv
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: execute py script # run gamescraper.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: |
-          pipenv run python gamescraper.py
+          python gamescraper.py
 
       - name: commit files
         run: |

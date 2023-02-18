@@ -1,0 +1,12 @@
+beautiful==0.0.2
+beautifulsoup4==4.11.2
+certifi==2022.12.7
+charset-normalizer==3.0.1
+idna==3.4
+lxml==4.9.2
+python-dotenv==0.21.1
+pytz==2022.7.1
+requests==2.28.2
+schedule==1.1.0
+soupsieve==2.4
+urllib3==1.26.14
