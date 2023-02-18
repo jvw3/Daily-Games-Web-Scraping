@@ -19,12 +19,12 @@ jobs:
       - name: install python packages
         run: |
           pip install pipenv
+          pipenv shell
 
       - name: execute py script # run gamescraper.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: |
-        pipenv shell
         python gamescraper.py
 
       - name: commit files
