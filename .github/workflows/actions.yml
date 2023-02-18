@@ -25,7 +25,8 @@ jobs:
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: |
-        python gamescraper.py
+          pipenv shell
+          python gamescraper.py
 
       - name: commit files
         run: |
