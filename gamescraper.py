@@ -73,3 +73,8 @@ def send_email():
 
 
 send_email()
+# schedule.every().day.at("09:15").do(send_email)
+
+# while True:
+#     schedule.run_pending()
+#     tm.sleep(1)
