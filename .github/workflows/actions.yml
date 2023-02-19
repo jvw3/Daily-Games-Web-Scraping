@@ -1,8 +1,9 @@
 name: run gamescraper.py
 
 on:
+  [push]
   schedule:
-    - cron: "50 17 * * *" # At 5:50 UTC / 11:50 CST
+    - cron: "0 15 * * *" # Cron Job Scheduled At: 3:00pm UTC / 9:00am CST / 10:00am EST
 
 jobs:
   build:
