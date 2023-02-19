@@ -1,10 +1,16 @@
+# Name of Github Action
 name: run gamescraper.py
 
+
+# Controls the what will start the action. 
+# For this action, action will be triggered on any push to main, and it is schedule to run at 9am daily. 
 on:
   push:
     branches: [ main ]
   schedule:
     - cron: "0 15 * * *" # Cron Job Scheduled At: 3:00pm UTC / 9:00am CST / 10:00am EST
+
+# This describes the steps that will run to complete the job.
 
 jobs:
   build:
