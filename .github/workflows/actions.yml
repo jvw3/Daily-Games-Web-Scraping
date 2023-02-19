@@ -2,7 +2,7 @@ name: run gamescraper.py
 
 on:
   schedule:
-    - cron: "20 45 * * *" # At 8:45Pm
+    - cron: "45 20 * * *" # At 8:45Pm
 
 jobs:
   build:
