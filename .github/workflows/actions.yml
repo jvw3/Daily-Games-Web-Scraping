@@ -1,8 +1,8 @@
 name: run gamescraper.py
 
-on: [push]
-  # schedule:
-  #   - cron: "*/1 * * * *" # Every 5 minutes
+on:
+  schedule:
+    - cron: "20 45 * * *" # At 8:45Pm
 
 jobs:
   build:
