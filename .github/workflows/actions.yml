@@ -2,7 +2,7 @@
 name: run gamescraper.py
 
 
-# Controls the what will start the action. 
+# Controls the what will start the action.
 # For this action, action will be triggered on any push to main, and it is schedule to run at 9am daily. 
 on:
   push:
