@@ -27,6 +27,7 @@ def send_email():
     # print(soup.prettify())
 
     # title = soup.find("div", class_="gametitle").text
+    # print(title)
 
     games_table = soup.find("table")
     # print(games_table)
