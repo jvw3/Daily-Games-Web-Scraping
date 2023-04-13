@@ -7,7 +7,7 @@ name: run gamescraper.py
 on:
   push:
     branches: [ main ]
-  pull request:
+  pull_request:
     branches: [ main ]
   schedule:
     - cron: "0 15 * * *" # Cron Job Scheduled At: 3:00pm UTC / 9:00am CST / 10:00am EST
