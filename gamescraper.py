@@ -23,7 +23,6 @@ def send_email():
     sender_email = os.getenv("SENDER_EMAIL")
     receiver_email = os.getenv("RECEIVER_EMAIL")
     sender_password = os.getenv("SENDER_PASS")
-    # message = games_table
     html = games_table
 
     subject = "Check out today's games!"
